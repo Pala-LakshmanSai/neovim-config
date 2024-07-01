@@ -55,6 +55,8 @@ return {
 							["<C-k>"] = actions.move_selection_previous, -- move to prev result
 							["<C-j>"] = actions.move_selection_next, -- move to prev result
 							["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist, -- move to prev result
+							["<C-d>"] = actions.preview_scrolling_down,
+							["<C-u>"] = actions.preview_scrolling_up,
 						},
 					},
 				},
