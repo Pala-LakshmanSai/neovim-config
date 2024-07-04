@@ -16,10 +16,10 @@ vim.keymap.set("t", "<Esc><Esc>", "exit<CR>", { desc = "Exit terminal mode" })
 --open terminal
 vim.keymap.set("n", "<leader>t", ":terminal<CR>")
 
-vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
-vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
-vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
-vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
+vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window", noremap = true, silent = true })
+vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window", noremap = true, silent = true })
+vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window", noremap = true, silent = true })
+vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window", noremap = true, silent = true })
 
 --theprimeagen
 vim.opt.smartindent = true
@@ -34,7 +34,6 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
-
 vim.keymap.set("x", "<leader>p", '"_dP')
 
 --vim.keymap.set("n", "<leader>y", "\"+y")
@@ -45,7 +44,7 @@ vim.keymap.set("x", "<leader>p", '"_dP')
 --vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 vim.keymap.set("n", "<leader>s", function()
-	vim.keymap.set("n", "<leader>s", vim.lsp.buf.format, {})
+    vim.keymap.set("n", "<leader>s", vim.lsp.buf.format, {})
 end)
 
 --vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
