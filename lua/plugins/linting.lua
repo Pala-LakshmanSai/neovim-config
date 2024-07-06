@@ -22,7 +22,7 @@ return {
             end,
         })
 
-        vim.keymap.set("n", "<C-l>", function()
+        vim.keymap.set("n", "ml", function()
             lint.try_lint()
         end, { desc = "Trigger linting for current file" })
     end,
