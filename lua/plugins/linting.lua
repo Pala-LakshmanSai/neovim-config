@@ -21,9 +21,9 @@ return {
                 lint.try_lint()
             end,
         })
-
-        vim.keymap.set("n", "ml", function()
+        local sadf
+        vim.keymap.set("n", "<C-n>", function()
             lint.try_lint()
-        end, { desc = "Trigger linting for current file" })
+        end, { desc = "Trigger linting for current file", noremap = true, silent = true })
     end,
 }
